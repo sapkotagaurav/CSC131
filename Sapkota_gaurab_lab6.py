@@ -1,14 +1,21 @@
+"""
+Author:Gaurab Sapkota
+
+"""
+
+
+
 from geometricObject import GeometricObject
 import math
+
 
 
 class Circle(GeometricObject):
     def __init__(
         self,
         radius=1.0,
-        color='white',
+        color="white",
         filled=True,
-        
     ):
         self.radius = radius
         GeometricObject.__init__(self, color, filled)
@@ -31,13 +38,13 @@ class Triangle(GeometricObject):
         side1=1.0,
         side2=1.0,
         side3=1.0,
-        color='white',
+        color="white",
         filled=True,
     ):
         self.side1 = side1
         self.side2 = side2
         self.side3 = side3
-        GeometricObject.__init__(self,color,filled)
+        GeometricObject.__init__(self, color, filled)
 
     def getArea(self):
         s = (self.side1 + self.side2 + self.side3) / 2
@@ -55,18 +62,24 @@ class Triangle(GeometricObject):
             GeometricObject.__str__(self),
         )
 
+
 class Square(GeometricObject):
-    def __init__(self,length=1.0,color="black",filled=False):
+    def __init__(self, length=1.0, color="black", filled=False):
         self.length = length
-        GeometricObject.__init__(self,color=color,filled=filled)
+        GeometricObject.__init__(self, color=color, filled=filled)
+
     def getArea(self):
         return self.length**2
+
     def getPerimeter(self):
-        return self.length*4
+        return self.length * 4
+
     def getDiagonal(self):
-        return 2**0.5*self.length
+        return 2**0.5 * self.length
+
     def __str__(self):
         return f"{type(self).__name__} : length:{self.length} {GeometricObject.__str__(self)}"
+
 
 def main():
     # Testing Circle class
@@ -100,7 +113,7 @@ def main():
     print(t1.getColor())
     print(t1.isFilled())
 
-    s= Square(4,'khaki',True)
+    s = Square(4, "khaki", True)
     print(s)
 
 
