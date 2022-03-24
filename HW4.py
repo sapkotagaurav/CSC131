@@ -1,3 +1,13 @@
+"""
+Authors:
+Gaurab Sapkota
+Mohan Thapa
+
+
+"""
+
+
+
 import random
 
 
@@ -7,7 +17,7 @@ class Card:
         self.face = False
 
     def __str__(self):
-        return (str(self.rank))
+        return str(self.rank)
 
 
 class Deck:
@@ -43,7 +53,7 @@ class Game:
         self.populateBoard()
 
     def isGameOver(self):
-        return self.cardsFacedDown == 0
+        return self.cardsFacedDown == 0 #game is over when there is no card facing down
 
     def play(self):
         while not self.isGameOver():
@@ -60,6 +70,11 @@ class Game:
                 second_card = self.board[int(second_coordinate[0]) - 1][
                     int(second_coordinate[1]) - 1
                 ]
+
+                if first_card.face or second_card.face:
+                    print("One of the card or both are already up.")
+                    continue
+
                 if first_card.rank == second_card.rank:
                     first_card.face = True
                     second_card.face = True
@@ -71,9 +86,9 @@ class Game:
                     )
                 self.displayBoard()
             except Exception:
-                print("Error! You  have to enter co-ordinates in the form of x y")
+                print("***Invalid Coordinates! Try Again.***")
                 continue
-        
+
         print("Game over, You did it.")
 
     def populateBoard(self):
