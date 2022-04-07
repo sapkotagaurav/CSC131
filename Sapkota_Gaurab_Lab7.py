@@ -59,7 +59,7 @@ class temperatureConversion:
     def from_faren(self):
         try:
             faren = float(self.faren_var.get())
-            celc = (faren - 32) * 9 / 5
+            celc = (faren - 32) * 5/9
             kelv = celc + 273.15
             self.celc_var.set(str(celc))
             self.kelv_var.set(str(kelv))
