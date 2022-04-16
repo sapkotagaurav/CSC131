@@ -1,7 +1,4 @@
-'''
-A program to animate a vertical bouncing ball
-Program Name: VerticalBouncingBall.py
-'''
+
 
 from tkinter import *
 import random
@@ -26,8 +23,8 @@ class Pong(Frame):
         
         directiony = "down" 
         directionx = 'left'
-        dy = 2 
-        dx =1
+        dy = 4
+        dx =2
 
         # move ball
         while True:
@@ -36,7 +33,7 @@ class Pong(Frame):
                 self.canvas.move("ball", dx, dy)
                 top_left_y += dy
                 top_left_x +=dx
-                if top_left_y + ball_diameter >= canvas_height : # ball has hit bottom wall
+                if top_left_y + ball_diameter >= canvas_height : 
                     directiony = "up"
                     self.canvas.itemconfig('ball',fill = random.choice(Pong.COLORS))
                 if top_left_x +ball_diameter >=canvas_width:
@@ -47,7 +44,7 @@ class Pong(Frame):
                 self.canvas.move("ball", -dx, dy)
                 top_left_y += dy
                 top_left_x -=dx
-                if top_left_y + ball_diameter >= canvas_height : # ball has hit bottom wall
+                if top_left_y + ball_diameter >= canvas_height : 
                     directiony = "up"
                     self.canvas.itemconfig('ball',fill = random.choice(Pong.COLORS))
                 if top_left_x +ball_diameter <=15:
@@ -58,18 +55,18 @@ class Pong(Frame):
                 self.canvas.move("ball", dx, -dy)
                 top_left_y -= dy
                 top_left_x +=dx
-                if top_left_y + ball_diameter <= 15 : # ball has hit bottom wall
+                if top_left_y + ball_diameter <= 15 : 
                     directiony = "down"
                     self.canvas.itemconfig('ball',fill = random.choice(Pong.COLORS))
                 if top_left_x +ball_diameter >=canvas_width:
                     directionx ='right'
                     self.canvas.itemconfig('ball',fill = random.choice(Pong.COLORS))
 
-            else:#directiony == "up" and directionx == "right":
+            else:
                 self.canvas.move("ball", -dx, -dy)
                 top_left_y -= dy
                 top_left_x -=dx
-                if top_left_y + ball_diameter <= 15 : # ball has hit bottom wall
+                if top_left_y + ball_diameter <= 15 :
                     directiony = "down"
                     self.canvas.itemconfig('ball',fill = random.choice(Pong.COLORS))
                 if top_left_x +ball_diameter <=15:
@@ -79,13 +76,7 @@ class Pong(Frame):
 
                 
    
-            """else: # i.e., direction is "up"
-                self.canvas.move("ball", dx, -dy)
-                top_left_y -= dy
-                
-                if top_left_y <= 0: # ball has hit top wall
-                    directiony = "down"
-                    """
+            
                 
             
 

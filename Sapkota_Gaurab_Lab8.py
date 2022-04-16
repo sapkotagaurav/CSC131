@@ -28,7 +28,7 @@ class Canvas(tk.Frame):
             master=self.frame, text="Filled", variable=self.checkVar
         )
         self.deleteBtn = tk.Button(self.frame,text="Clear",command=self.clearCanvas)
-        self.master.title("Hello")
+        self.master.title("Canvas")
         self.canvas.grid(column=0, row=0)
         self.rectRadio.grid(row=0, column=0)
         self.ovalRadio.grid(row=0, column=1)
