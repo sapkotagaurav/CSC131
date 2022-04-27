@@ -1,4 +1,7 @@
 {
     "python.formatting.provider": "black",
-    "docwriter.style": "Google"
+    "docwriter.style": "Google",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
