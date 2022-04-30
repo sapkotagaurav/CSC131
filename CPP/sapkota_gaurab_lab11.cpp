@@ -1,3 +1,14 @@
+/**
+ * @file sapkota_gaurab_lab11.cpp
+ * @author Gaurab Sapkota
+ * @brief 
+ * @version 0.1
+ * @date 2022-04-29
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <iostream>
 #include <string>
 
