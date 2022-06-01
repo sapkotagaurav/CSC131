@@ -1,11 +1,32 @@
+/**
+ * 
+ * @file sapkota_gaurab_lab12.cpp
+ * @author Gaurab Sapkota
+ * @brief Program to find standard deviation using arrays and vectors
+ * @version 0.1
+ * @date 2022-05-06
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>
 #include <vector>
 
 using namespace std;
+//overloading the function
 double stndardDeviation(vector<double>);
 
+
+/**
+ * @brief Using Array
+ * 
+ * @param arr 
+ * @param arrSize 
+ * @return double 
+ */
 double standardDeviation(double arr[], int arrSize ){
     double sum =0;
     double mean_deviation=0;
@@ -25,7 +46,11 @@ double standardDeviation(double arr[], int arrSize ){
     
 }
 
-
+/**
+ * @brief Main function
+ * 
+ * @return int 
+ */
 int main(){
     
     double arr[20] ={2, 11, 4, 5, 9, 5, 4, 12, 7, 8, 9, 3, 7, 4, 12, 10, 9, 6, 9, 4};
@@ -40,6 +65,13 @@ int main(){
     cout<<fixed<<setprecision(2)<<stndardDeviation(vect)<<endl;
 
 }
+
+/**
+ * @brief Using vector
+ * 
+ * @param vect 
+ * @return double 
+ */
 
 double stndardDeviation(vector<double> vect){
     double sum =0;
